@@ -1,0 +1,19 @@
+{
+  "name": "wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./http/serve.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emily",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1"
+  }
+}
