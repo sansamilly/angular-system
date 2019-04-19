@@ -3,18 +3,18 @@
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="./src/theme/scss/index.scss">
+      <link rel="stylesheet" href="./theme/scss/index.css">
       <title>Wechat</title>
 </head>
 <body>
       <div id="app">
-            <div class="chat-panel">
+            <div class="chat-panel" ng-controller="ctrl">
                   <div class="header">
                         <div class="fl protrait">
-                              <img src="./src/theme/img/avatar.jpg" alt="">
+                              <img src="./theme/img/avatar.jpg" alt="">
                               <div class="inline-block">
-                                    <p class="name"></p>
-                                    <p class="signature"></p>
+                                    <p class="name max-width-200 text-overflow-hidden" title="{{name}}" ng-bind="name"></p>
+                                    <p class="signature max-width-450 text-overflow-hidden" title="{{signature}}" ng-bind="signature"></p>
                               </div>
                         </div>
                         <div class="fr operate-btn">
@@ -25,11 +25,20 @@
                               </ul>
                         </div>
                   </div>
-                  <div class="container"></div>
+                  <div class="container">
+                        <div ng-repeat="item in messages" class="msg" ng-class="{'myMsg': item.isMe, 'otherMsg': !item.isMe}">
+                              <div class="msg-content" ng-class="{'myMsg-content': item.isMe, 'otherMsg-content': !item.isMe}">
+                                    <p class="time" ng-bind="item.time | date: 'yyyy-mm-dd hh:mm:ss'"></p>
+                                    <p class="mt-5" ng-bind="item.msg"></p>
+                              </div>
+                        </div>
+                  </div>
                   <div class="footer">
                         <div class="operate-btn"></div>
-                        <div class="userMsg" contenteditable="true"></div>
-                        <div class="sendBtn"></div>
+                        <div class="userMsg" ng-model="userMsg" c-editable></div>
+                        <div class="send-operate">
+                              <span ng-click="sendMsg()" class="sendBtn">发送</span>
+                        </div>
                   </div>
             </div>
       </div>

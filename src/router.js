@@ -1,7 +1,7 @@
-define('src/router',['router'], function(router) {
+define('src/router',['angular'], function(angular) {
       'use strict';
       
-      console.log(router);
+
       var module = angular.module("router", []);
       return module;
 });

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node ./http/serve.js",
+    "serve": "node http/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Emily",

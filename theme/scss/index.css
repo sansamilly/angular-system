@@ -1,0 +1,117 @@
+@import './reset.css';
+body{
+      overflow: auto;
+      font-size: 14px;
+}
+*{
+      box-sizing: border-box;
+}
+.fl{
+      float: left;
+}
+.fr{
+      float: right;
+}
+.mt-5{
+      margin-top: 5px;
+}
+.max-width-150 {
+      max-width: 150px;
+}
+.max-width-200 {
+      max-width: 200px;
+}
+.max-width-450 {
+      max-width: 450px;
+}
+.inline-block{
+      display: inline-block;
+}
+.text-overflow-hidden{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+}
+.chat-panel{
+      width: 800px;
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -400px;
+      margin-top: -300px; 
+      border: 1px solid #eee;
+      box-shadow: 0 0 6px rgba(0,0,0,.6);
+}
+.chat-panel .header{
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      background: #eee;
+}
+.chat-panel .header img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      vertical-align: top;
+}
+.chat-panel .header .name{
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 5px;
+}
+.chat-panel .header .signature{
+      margin-top: 8px;
+}
+.chat-panel .container{
+      width: 100%;
+      height: calc(100% - 80px - 150px); 
+      padding: 10px;
+      overflow-y: auto;
+}
+.chat-panel .container .msg{
+      width: 100%;
+}
+.chat-panel .container .myMsg{
+     float: right;
+}
+.chat-panel .container .otherMsg{
+     float: left;
+}
+.chat-panel .container .msg-content{
+     max-width: 60%;
+     border-radius: 10px;
+     padding: 10px;
+     margin-bottom: 10px;
+}
+.chat-panel .container .msg-content .time{
+     color: gray;
+}
+.chat-panel .container .myMsg-content{
+     background: greenyellow;
+     float: right;
+}
+.chat-panel .container .otherMsg-content{
+      background: yellow;
+      float: left;
+}
+.chat-panel .footer{
+      height: 150px;
+      padding: 10px;
+      border-top: 1px solid #ddd; 
+}
+.chat-panel .footer .operate-btn{
+      /* height: 30px;
+      line-height: 30px; */
+}
+.chat-panel .footer .userMsg{
+      height: calc(100% - 30px);
+}
+.chat-panel .footer .send-operate{
+      height: 30px;
+      line-height: 30px;
+}
+.chat-panel .footer .send-operate .sendBtn{
+      cursor: pointer;
+      float: right;
+}
