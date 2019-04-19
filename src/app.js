@@ -1,7 +1,7 @@
-define('src/app',['angular', 'src/module/dependMod'], function(angular, dependMod) {
+define('src/app',['angular', 'src/module/dependMod', 'src/router'], function(angular, dependMod, router) {
       'use strict';
-      
-      var module = angular.module("myModule", [dependMod.name]);
+ 
+      var module = angular.module("myModule", [dependMod.name, router.name]);
       module.controller('ctrl', function($scope){
             $scope.name = "Sandy";
             $scope.signature = "I'm just a lovely cat.";
