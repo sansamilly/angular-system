@@ -1,0 +1,33 @@
+<div class="chat-panel" ng-controller="ctrl">
+      <div class="header">
+            <div class="fl protrait">
+                  <img src="./theme/img/avatar.jpg" alt="">
+                  <div class="inline-block">
+                        <p class="name max-width-200 text-overflow-hidden" title="{{name}}" ng-bind="name"></p>
+                        <p class="signature max-width-450 text-overflow-hidden" title="{{signature}}" ng-bind="signature"></p>
+                  </div>
+            </div>
+            <div class="fr operate-btn">
+                  <ul>
+                        <li>
+                              <span class=""></span>
+                        </li>
+                  </ul>
+            </div>
+      </div>
+      <div class="container">
+            <div ng-repeat="item in messages" class="msg" ng-class="{'myMsg': item.isMe, 'otherMsg': !item.isMe}">
+                  <div class="msg-content" ng-class="{'myMsg-content': item.isMe, 'otherMsg-content': !item.isMe}">
+                        <p class="time" ng-bind="item.time | date: 'yyyy-mm-dd hh:mm:ss'"></p>
+                        <p class="mt-5" ng-bind="item.msg"></p>
+                  </div>
+            </div>
+      </div>
+      <div class="footer">
+            <div class="operate-btn"></div>
+            <div class="userMsg" ng-model="userMsg" c-editable></div>
+            <div class="send-operate">
+                  <span ng-click="sendMsg()" class="sendBtn">发送</span>
+            </div>
+      </div>
+</div>

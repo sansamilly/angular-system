@@ -5,22 +5,22 @@
             paths: {
                   jquery: './src/lib/jquery-1.11.3',
                   angular: './src/lib/angular',
-                  uiRouter: './src/lib/angular-route'
+                  uiRoute: './src/lib/angular-route'
             },
             shim: {
                   angular: {
                         deps: ['jquery'],
                         exports: 'angular'
                   },
-                  uiRouter: {
+                  uiRoute: {
                         deps: ['angular'],
-                        exports: 'uiRouter'
+                        exports: 'uiRoute'
                   }
             }
       })
 
       require(['src/app'], function(app){
-            angular.bootstrap("#app", [app.name]);
+            angular.bootstrap("body", [app.name]);
       })
 
 })()

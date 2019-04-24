@@ -13,9 +13,7 @@ define('src/directive/editable',[
             function link(scope, $ele, attrs, ctrl){
                   $ele.attr('contenteditable', true);
                   ctrl.$formatters.push(function(value){
-                        // $parse(attrs.ngModel).assign(scope, ctrl.$viewValue);
-                        ctrl.$setViewValue(ctrl.$viewValue);
-                        ctrl.$render();
+                        $parse(attrs.ngModel).assign(scope, value);
                         return value;
                   })
 
